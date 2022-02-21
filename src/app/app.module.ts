@@ -3,13 +3,15 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 
-import { HeroFormComponent } from './hero-form/hero-form.component';
+import { NameEditorComponent} from './name-editor/name-editor.component';
+import { ProfileEditorComponent } from './profile-editor/profile-edit.component';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeroFormComponent
+   NameEditorComponent, 
+   ProfileEditorComponent
   ],
   imports: [
     BrowserModule,

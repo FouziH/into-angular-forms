@@ -1,1 +1,11 @@
-<hero-form></hero-form>
+<h1>{{title}}</h1>
+
+<nav>
+    <button type='button' (click)="toggleEditor('name')">Name Editor</button>
+
+    <button (click)="toggleEditor('profile')">Profile Editor</button>
+
+    <app-name-editor *ngIf="showNameEditor"></app-name-editor>
+    
+
+</nav>
