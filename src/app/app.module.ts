@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 
 import { HeroFormComponent } from './hero-form/hero-form.component';
-import { FormControl } from '@angular/forms';
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -12,8 +12,9 @@ import { FormControl } from '@angular/forms';
     HeroFormComponent
   ],
   imports: [
-    BrowserModule, 
-    FormControl
+    BrowserModule,
+    FormsModule,
+     ReactiveFormsModule 
   ],
   providers: [],
   bootstrap: [AppComponent]
