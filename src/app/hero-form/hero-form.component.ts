@@ -1,13 +1,17 @@
 import { Component } from '@angular/core';
 
+import { FormControl } from '@angular/forms';
+
 @Component({
-    selector: 'her-form', 
+    selector: 'hero-form', 
     templateUrl: 'hero-form.component.html', 
-    styleUrls: ['hero-form.component.css']
+    
 })
 
 export class HeroFormComponent {
-    title:string = 'Hero-Form';
+  name =  new FormControl('')
 
-    
+  updateName() {
+      this.name.setValue('Nancy')
+  }
 }
