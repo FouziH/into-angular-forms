@@ -6,8 +6,27 @@
   <input type="text" id="last-name" formControlName="lastName" />
 
   <div formGroupName="Address">
-    <h2>Address</h2>
-    <label for="street"></label>
-    <input type="text" id="street" />
+
+    <label for="street">Street: </label>
+    <input id="street" type="text" formControlName="street">
+
+    <label for="city">City: </label>
+    <input id="city" type="text" formControlName="city">
+
+    <label for="state">State: </label>
+    <input id="state" type="text" formControlName="state">
+
+    <label for="zip">Zip Code: </label>
+    <input id="zip"type="text" formControlName="zip">
+
+    <div formArrayName="aliases">
+
+        <button>+ another alias</button>
+    </div>
+
+    <div *ngFor="let alias of aliases.controls; let i=index">
+        <label for="alias-{{ i }}">Alias:</label>
+        <input id="alias-{{ i }}" type="text" [formControlName]="i">
+    </div>
   </div>
 </form>
