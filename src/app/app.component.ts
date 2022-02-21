@@ -10,10 +10,13 @@ export class AppComponent {
   editor: EditorType = 'name'
 
   get showNameEditor() {
+    return this.editor === 'name'
+  }
+  get showProfileEditor() {
     return this.editor === 'profile'
   }
 
-  toggleEditor(name: string) {
-
+  toggleEditor(type: EditorType) {
+    this.editor = type
   }
 }
